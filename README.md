@@ -53,7 +53,7 @@ end
 
 ## Parameters
 
-Set parameters [unreleased]
+Set parameters
 
 ```ruby
 Rcf::Forest.new(
