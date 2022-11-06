@@ -11,6 +11,7 @@ module Rcf
     end
 
     extern "rcf_forest *rcf_create(size_t dimensions)"
+    extern "int rcf_set_param(rcf_forest *forest, const char *param, const char *value)"
     extern "void rcf_update(rcf_forest *rcf, const float *point)"
     extern "double rcf_score(rcf_forest *rcf, const float *point)"
     extern "void rcf_free(rcf_forest *rcf)"

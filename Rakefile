@@ -43,10 +43,12 @@ def download_platform(platform)
 
   if url.end_with?(".tar.gz")
     FileUtils.mkdir_p(dest)
-    system "tar", "xzf", file.path, "-C", dest, exception: true
+    system "tar", "xzf", file.path, "-C", dest, "--strip-components=1", exception: true
   else
     # run apt install unzip on Linux
-    system "unzip", "-q", file.path, "-d", dest, exception: true
+    tmpdir = Dir.mktmpdir
+    system "unzip", "-q", file.path, "-d", tmpdir, exception: true
+    FileUtils.mv(Dir["#{tmpdir}/*"].first, dest)
   end
 
   # remove unneeded files

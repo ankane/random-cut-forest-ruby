@@ -51,6 +51,21 @@ forest = Rcf::Forest.new(3)
 end
 ```
 
+## Parameters
+
+Set parameters [unreleased]
+
+```ruby
+Rcf::Forest.new(
+  dimensions,
+  shingle_size: 1,          # shingle size to use
+  sample_size: 256,         # points to keep in sample for each tree
+  number_of_trees: 100,     # number of trees to use in the forest
+  random_seed: 42,          # random seed to use
+  parallel: false           # enable parallel execution
+)
+```
+
 ## Reference
 
 - [Robust Random Cut Forest Based Anomaly Detection On Streams](https://proceedings.mlr.press/v48/guha16.pdf)
