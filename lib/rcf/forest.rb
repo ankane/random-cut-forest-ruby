@@ -4,7 +4,7 @@ module Rcf
       @dimensions = dimensions
 
       @pointer = FFI.rcf_create(dimensions)
-      ObjectSpace.define_finalizer(self, self.class.finalize(@pointer))
+      ObjectSpace.define_finalizer(@pointer, self.class.finalize(@pointer.to_i))
 
       set_param("shingle_size", shingle_size)
       set_param("sample_size", sample_size)
@@ -21,9 +21,9 @@ module Rcf
       FFI.rcf_update(@pointer, point_ptr(point))
     end
 
-    def self.finalize(pointer)
+    def self.finalize(addr)
       # must use proc instead of stabby lambda
-      proc { FFI.rcf_free(pointer) }
+      proc { FFI.rcf_free(addr) }
     end
 
     private

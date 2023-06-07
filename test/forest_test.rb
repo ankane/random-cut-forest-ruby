@@ -32,4 +32,10 @@ class ForestTest < Minitest::Test
     end
     assert_equal "Bad size", error.message
   end
+
+  def test_copy
+    forest = Rcf::Forest.new(3)
+    forest.dup
+    forest.clone
+  end
 end
