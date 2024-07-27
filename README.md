@@ -2,7 +2,7 @@
 
 [Random Cut Forest](https://github.com/aws/random-cut-forest-by-aws) (RCF) anomaly detection for Ruby
 
-[![Build Status](https://github.com/ankane/random-cut-forest-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/random-cut-forest-ruby/actions)
+[![Build Status](https://github.com/ankane/random-cut-forest-ruby/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/random-cut-forest-ruby/actions)
 
 ## Installation
 
