@@ -18,8 +18,8 @@ class ForestTest < Minitest::Test
     end
 
     assert_in_delta 0, scores[0]
-    assert_in_delta 0, scores[63]
-    assert_operator scores[64], :>, 0.5
+    assert_in_delta 0, scores[64]
+    assert_operator scores[65], :>, 0.5
     assert_operator scores[-3], :<, 1.2
     assert_operator scores[-2], :>, 3
     assert_operator scores[-1], :<, 1.2
