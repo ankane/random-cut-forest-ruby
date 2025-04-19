@@ -2,8 +2,8 @@
 require "fiddle/import"
 
 # modules
-require "rcf/forest"
-require "rcf/version"
+require_relative "rcf/forest"
+require_relative "rcf/version"
 
 module Rcf
   class Error < StandardError; end
