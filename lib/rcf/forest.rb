@@ -24,7 +24,7 @@ module Rcf
     private
 
     def set_param(param, value)
-      if FFI.rcf_set_param(@pointer, param, value.to_s) != 0
+      if FFI.rcf_set_param(@pointer, +param, value.to_s) != 0
         raise ArgumentError, "Invalid value for #{param}"
       end
     end
