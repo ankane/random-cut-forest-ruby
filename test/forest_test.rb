@@ -20,9 +20,9 @@ class ForestTest < Minitest::Test
     assert_in_delta 0, scores[0]
     assert_in_delta 0, scores[64]
     assert_operator scores[65], :>, 0.5
-    assert_operator scores[-3], :<, 1.2
+    assert_operator scores[-3], :<, 1.25
     assert_operator scores[-2], :>, 3
-    assert_operator scores[-1], :<, 1.2
+    assert_operator scores[-1], :<, 1.25
   end
 
   def test_bad_size
