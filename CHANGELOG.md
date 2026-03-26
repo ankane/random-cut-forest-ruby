@@ -1,3 +1,7 @@
+## 0.3.0 (unreleased)
+
+- Dropped support for Ruby < 3.3
+
 ## 0.2.0 (2024-10-23)
 
 - Updated RCF to 4.0.0

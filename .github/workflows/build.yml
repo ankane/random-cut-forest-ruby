@@ -10,16 +10,12 @@ jobs:
             os: ubuntu-latest
             valgrind: true
           - ruby: 3.4
-            os: ubuntu-latest
-          - ruby: 3.3
-            os: ubuntu-latest
-          - ruby: 3.2
             os: macos-latest
-          - ruby: 3.1
+          - ruby: 3.3
             os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
